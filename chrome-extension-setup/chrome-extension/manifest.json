@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "GPT-3 Chatbot",
+    "version": "1.0",
+    "description": "Chat with GPT-3",
+    "permissions": ["http://localhost:5000/"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "ob.png",
+            "48": "ob.png",
+            "128": "ob.png"
+        }
+    },
+    "icons": {
+        "16": "ob.png",
+        "48": "ob.png",
+        "128": "ob.png"
+    }
+}

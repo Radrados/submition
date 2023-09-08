@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBot for Service Desk</title>
+    <img src="sun.jpg" id="icon">
+    <style>
+        body {
+            background-color: var(--backg-colour);
+            font-family: Arial, sans-serif;
+            width: 400px;
+        }
+
+        :root {
+            --primary-colour: rgb(255,255,255);
+            --secondary-colour: rgb(0,0,0);
+            --deep-blue-colour: rgb(4, 25, 72);
+            --blue-colour: rgb(0, 120, 254);
+            --chat-type: rgb(212, 212, 212);
+            --history-box: rgb(255, 255, 255);
+            --bot-msg-colour: rgb(201, 201, 201);
+        }
+
+        .dark-theme {
+            --primary-colour: rgb(0,0,0);
+            --secondary-colour: rgb(255,255,255);
+            --backg-colour: rgb(30, 30, 30);
+            --chat-type: rgb(54, 54, 54);
+            --history-box: rgb(54, 54, 54);
+            --bot-msg-colour: rgb(79, 79, 79);
+        }
+
+        #icon {
+            width: 30px;
+            cursor: pointer;
+        }
+        #chatHistory {
+            border: 1px solid var(--secondary-colour);
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: var(--history-box);
+        }
+        .userMessage {
+            color: rgb(255,255,255);
+            background-color: var(--blue-colour);
+            font-size: 15px;
+            padding: 8px;
+            border-radius: 10px;
+            text-align: left;
+            float: right;
+            clear: both;
+            margin-bottom: 8px;
+        }
+
+        .botMessage {
+            color: var(--secondary-colour);
+            background-color: var(--bot-msg-colour);
+            font-size: 15px;
+            padding: 8px;
+            margin: 0 60px 7px 7px;
+            border-radius: 10px;
+            align-self: flex-start;
+            float: left;
+            clear: both;
+            margin-bottom: 8px;
+        }
+        button {
+            background-color: var(--blue-colour);
+            border: 1px solid var(--secondary-colour);
+            color: var(--primary-colour);
+            font-size: 16px;
+            padding: 5px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 98%;
+            color: var(--secondary-colour);
+            height: 50px;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+            background-color: var(--chat-type);
+            align-self: center;
+            border-radius: 8px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatHistory"></div>
+    <textarea id="userInput"></textarea>
+    <button id="send">Send</button>
+    <script src="popup.js"></script>
+</body>
+</html>
